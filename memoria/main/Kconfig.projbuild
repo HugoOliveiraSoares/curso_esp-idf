@@ -1,0 +1,24 @@
+menu "Menu Personalizado"
+
+  config NOME_DO_PROJETO
+    string "Nome do projeto"
+    default "Projeto de Demonstração - FSE"
+    help
+      Preencha o nome do projeto
+
+  config AMBIENTE
+    choice
+      bool "Selecione uma opção"
+        default DEBUG
+      config DEBUG
+       bool "Habilitar o modo DEBUG"
+     config HOMOLOGACAO 
+       bool "Habilitar o modo HOMOLOGACAO"
+     config PRODUCAO
+       bool "Habilitar o modo PRODUCAO"
+  endchoice
+
+  config FREQUENCIA_DE_ATUALIZACAO
+    int "10"
+    range 1 30
+endmenu

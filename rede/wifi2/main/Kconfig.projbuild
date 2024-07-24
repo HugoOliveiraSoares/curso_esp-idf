@@ -1,0 +1,20 @@
+menu "Configuração do Wifi Configuration"
+
+  config WIFI_SSID
+    string "Wifi SSID"
+    default "ssid"
+    help
+      Nome da rede Wifi.
+
+  config WIFI_PASSWORD
+    string "Senha do wifi"
+    default "minha_senha"
+    help
+      Senha do Wifi (WPA or WPA2).
+
+  config MAXIMUM_RETRY
+    int "Número máximo de tentativas de conexão"
+    default 5
+    help
+      Configure o valor máximo de tentativas de conexão.
+endmenu
